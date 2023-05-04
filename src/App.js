@@ -6,19 +6,19 @@ const  App = () => {
    const [ previousChats, setPreviousChats] = useState([])
    const [ currentTitle, setCurrentTitle ] = useState(null)
 
-   const createNewChat = ()=>{
+const createNewChat = ()=>{
      setMessage(null)
      setValue("")
      setCurrentTitle(null)
    }
 
-   const handleClick = (uniqueTitle)=> {
+const handleClick = (uniqueTitle)=> {
      setCurrentTitle(uniqueTitle)
      setMessage(null)
      setValue("")
      }
 
-   const getMessages = async () => {
+const getMessages = async () => {
       const options = {
         method : "POST",
         body: JSON.stringify({
